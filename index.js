@@ -15,6 +15,7 @@ var db = null
 mongoclient.connect("mongodb://localhost:27017/apidb", (err, client) => {
     if (err) throw err
     db = client.db('apidb')
+    console.log('mongodb connected')
 })
 
 app.get('/', (req, res) => {
